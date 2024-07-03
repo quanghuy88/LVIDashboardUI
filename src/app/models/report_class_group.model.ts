@@ -1,0 +1,19 @@
+export class report_class_group {
+    thang_ht: string | undefined;
+    thang_ht_namtruoc: string | undefined;
+    thangtruoc_ht: string | undefined;
+    thangtruoc_namtruoc: string | undefined;
+    bhg_thang_ht: string | undefined;
+    bhg_thang_muctieu: string | undefined;
+    bhg_thang_tlht: string | undefined;
+    bhg_lk_ht: string | undefined;
+    bhg_lk_muctieu: string | undefined;
+    bhg_lk_tlht: string | undefined;
+    bhg_lk_phankhai: string | undefined;
+    bhg_lk_tangtruong: string | undefined;
+    tlbtgl_ht: string | undefined;
+    tlbtgl_namtruoc: string | undefined;
+    rcg_bhg_nnv_thangs: any[] | undefined;
+    rcg_bhg_nnv_ngays: any[] | undefined;
+    rcg_bhg_tlhts: any[] | undefined;
+}

@@ -1,0 +1,30 @@
+<!-- GLOBAL-LOADER -->
+<div id="global-loader">
+    <img src="../assets/images/loader.svg" class="loader-img" alt="Loader">
+</div>
+<!-- /GLOBAL-LOADER -->
+
+<!-- PAGE -->
+<div class="page">
+    <div class="page-main">
+
+        <app-header></app-header>
+
+        <app-sidebar></app-sidebar>
+
+        <!--app-content open-->
+        <div class="main-content app-content mt-0">
+            <div class="side-app">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <!--app-content closed-->
+
+        <!-- <app-sidebar-right></app-sidebar-right> -->
+    </div>
+
+    <app-footer></app-footer>
+</div>
+
+<!-- BACK-TO-TOP -->
+<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
