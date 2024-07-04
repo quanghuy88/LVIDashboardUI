@@ -19,24 +19,56 @@
                     </svg></div>
                 <ul class="side-menu">
                     <li class="sub-category">
-                        <h3>Tổng quan</h3>
+                        <!-- <h3>Tổng quan</h3> -->
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item has-link" [routerLink]="['/dashboardgeneral']"><i
-                                class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Tổng
-                                hợp</span></a>
+                        <a class="side-menu__item has-link" [routerLink]="['/dashboard']"><i
+                                class="side-menu__icon fa fa-dashboard"></i><span
+                                class="side-menu__label">General</span></a>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item has-link" [routerLink]="['/dashboardclassgroup']"><i
-                                class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Tổng
-                                hợp</span></a>
+                        <a class="side-menu__item has-link"><i class="side-menu__icon fa fa-shopping-cart"></i><span
+                                class="side-menu__label" (click)="showSubMenuCG = !showSubMenuCG">Class
+                                Group</span><i *ngIf="!showSubMenuCG" Class="angle fe fe-chevron-right"></i><i
+                                *ngIf="showSubMenuCG" Class="angle fe fe-chevron-down"></i></a>
+                        <ng-container *ngIf="showSubMenuCG">
+                            <ul class="navbranchitem">
+                                <li routerLinkActive="active" *ngFor="let childmenu of listBranch">
+                                    <ul class="sidemenu-list">
+                                        <li class="slide-item">
+                                            <a class="side-menu__item has-link"
+                                                [routerLink]="['/classgroup',childmenu.name]"><i
+                                                    class="side-menu__icon fe fe-home"></i><span
+                                                    class="side-menu__label">{{childmenu.name}}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ng-container>
                     </li>
                     <li class="slide">
-                        <a class="side-menu__item has-link" [routerLink]="['/dashboardbranch']"><i
-                                class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Tổng
-                                hợp</span></a>
+                        <a class="side-menu__item has-link"><i class="side-menu__icon fa fa-sitemap"></i><span
+                                class="side-menu__label"
+                                (click)="showSubMenuBranch = !showSubMenuBranch">Branch</span><i
+                                *ngIf="!showSubMenuBranch" Class="angle fe fe-chevron-right"></i><i
+                                *ngIf="showSubMenuBranch" Class="angle fe fe-chevron-down"></i>
+                        </a>
+                        <ng-container *ngIf="showSubMenuBranch">
+                            <ul class="navbranchitem">
+                                <li routerLinkActive="active" *ngFor="let childmenu of listBranch">
+                                    <ul class="sidemenu-list">
+                                        <li class="slide-item">
+                                            <a class="side-menu__item has-link"
+                                                [routerLink]="['/branch',childmenu.name]"><i
+                                                    class="side-menu__icon fe fe-home"></i><span
+                                                    class="side-menu__label">{{childmenu.name}}</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ng-container>
                     </li>
-
                 </ul>
                 <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
                         width="24" height="24" viewBox="0 0 24 24">

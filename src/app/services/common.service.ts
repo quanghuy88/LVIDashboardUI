@@ -44,4 +44,8 @@ export class CommonService extends RequestBaseService {
     getClaimBranch(branchIds: string, types: string): Observable<any> {
         return this.http.post(API_URL + "/GetClaimBranch", { branchIds: branchIds, types: types }, { headers: this.getHeaders });
     }
+    //data test
+    getBranchesTest() {
+        return [{ name: 'HO' }, { name: 'test2' }, { name: 'test3' }, { name: 'test4' }];
+    }
 }

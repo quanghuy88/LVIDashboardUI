@@ -9,7 +9,7 @@ import { NotfoundComponent } from './pages/system/notfound/notfound.component';
 import { UnauthorizedComponent } from './pages/system/unauthorized/unauthorized.component';
 import { DashboardBranchComponent } from './pages/dashboard-branch/dashboard-branch.component';
 import { DashboardClassGroupComponent } from './pages/dashboard-class-group/dashboard-class-group.component';
-import { DashboardGeneralComponent } from './pages/dashboard-general/dashboard-general.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -25,23 +25,24 @@ const routes: Routes = [
         component: AdminLayoutComponent,
         children: [
             {
-                path: 'dashboardgeneral',
-                component: DashboardGeneralComponent
-                //   canActivate: [AuthGuard],
-                //   data: { roles: [Role.ADMIN, Role.HO, Role.MANAGER] }
+                path: 'dashboard',
+                component: DashboardComponent,
+                // canActivate: [AuthGuard],
+                // data: {roles: [Role.ADMIN, Role.HO, Role.MANAGER]}
             },
             {
-                path: 'dashboardbranch',
-                component: DashboardBranchComponent
-                //   canActivate: [AuthGuard],
-                //   data: { roles: [Role.ADMIN, Role.HO, Role.MANAGER] }
-            },
-            {
-                path: 'dashboardclassgroup',
+                path: 'classgroup/:id',
                 component: DashboardClassGroupComponent
                 //   canActivate: [AuthGuard],
                 //   data: { roles: [Role.ADMIN, Role.HO, Role.MANAGER] }
             },
+            {
+                path: 'branch/:id',
+                component: DashboardBranchComponent
+                //   canActivate: [AuthGuard],
+                //   data: { roles: [Role.ADMIN, Role.HO, Role.MANAGER] }
+            },
+
         ]
     },
 

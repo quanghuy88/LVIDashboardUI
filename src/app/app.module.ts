@@ -11,7 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { SidebarRightComponent } from './shared/sidebar-right/sidebar-right.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { DashboardGeneralComponent } from './pages/dashboard-general/dashboard-general.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +32,7 @@ import { NotificationModule } from '@progress/kendo-angular-notification';
 import { GaugesModule } from "@progress/kendo-angular-gauges";
 import { LabelModule } from "@progress/kendo-angular-label";
 import { SliderModule } from "@progress/kendo-angular-inputs";
+import { DashboardBranchComponent } from './pages/dashboard-branch/dashboard-branch.component';
 
 @NgModule({
     imports: [
@@ -66,7 +67,8 @@ import { SliderModule } from "@progress/kendo-angular-inputs";
         BlankLayoutComponent,
         NotfoundComponent,
         UnauthorizedComponent,
-        DashboardGeneralComponent
+        DashboardComponent,
+        DashboardBranchComponent
     ],
 
     providers: [authInterceptorProviders],

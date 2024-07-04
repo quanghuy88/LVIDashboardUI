@@ -16,6 +16,8 @@ declare var $: any
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
 
+  showSubMenuBranch: boolean = false;
+  showSubMenuCG: boolean = false;
   currentUser: User = new User;
   listBranch: Array<Branch> = [];
 
@@ -242,62 +244,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         }
       }
     });
-    // Activate sidebar slide toggle	   
-    /* 
-    $("[data-bs-toggle='sub-slide']").on('click', function (e: any) {
-      var $this = $("[data-bs-toggle='sub-slide']");
-      var checkElement = $this.next();
-      var animationSpeed = 300,
-        slideMenuSelector = '.sub-slide-menu';
-      if (checkElement.is(slideMenuSelector) && checkElement.is(':visible')) {
-        checkElement.slideUp(animationSpeed, function () {
-          checkElement.removeClass('open');
-        });
-        checkElement.parent("li").removeClass("is-expanded");
-      }
-      else if ((checkElement.is(slideMenuSelector)) && (!checkElement.is(':visible'))) {
-        var parent = $this.parents('ul').first();
-        var ul = parent.find('ul[class^="sub-slide-menu"]:visible').slideUp(animationSpeed);
-        ul.removeClass('open');
-        var parent_li = $this.parent("li");
-        checkElement.slideDown(animationSpeed, function () {
-          checkElement.addClass('open');
-          parent.find('li.is-expanded').removeClass('is-expanded');
-          parent_li.addClass('is-expanded');
-        });
-      }
-      if (checkElement.is(slideMenuSelector)) {
-        e.preventDefault();
-      }
-    });
-    // Activate sidebar slide toggle	
-    $("[data-bs-toggle='sub-slide2']").on('click', function (e: any) {
-      var $this = $("[data-bs-toggle='sub-slide2']");
-      var checkElement = $this.next();
-      var animationSpeed = 300,
-        slideMenuSelector = '.sub-slide-menu2';
-      if (checkElement.is(slideMenuSelector) && checkElement.is(':visible')) {
-        checkElement.slideUp(animationSpeed, function () {
-          checkElement.removeClass('open');
-        });
-        checkElement.parent("li").removeClass("is-expanded");
-      }
-      else if ((checkElement.is(slideMenuSelector)) && (!checkElement.is(':visible'))) {
-        var parent = $this.parents('ul').first();
-        var ul = parent.find('ul[class^="sub-slide-menu"]:visible').slideUp(animationSpeed);
-        ul.removeClass('open');
-        var parent_li = $this.parent("li");
-        checkElement.slideDown(animationSpeed, function () {
-          checkElement.addClass('open');
-          parent.find('li.is-expanded').removeClass('is-expanded');
-          parent_li.addClass('is-expanded');
-        });
-      }
-      if (checkElement.is(slideMenuSelector)) {
-        e.preventDefault();
-      }
-    });
-    */
   }
-
+  //show menu branch
+  showBranch(event: any) {
+    alert(1);
+    // $(".navbranchitem").style.display = "block";
+  }
 }

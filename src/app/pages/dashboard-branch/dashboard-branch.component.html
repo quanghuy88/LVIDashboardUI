@@ -1,1 +1,744 @@
-<p>dashboard-branch works!</p>
+<!-- CONTAINER -->
+<div class="main-container container-fluid">
+    <div class="page-header">
+        <h1 class="page-title">Report General</h1>
+        <div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Report General</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance accumulated until June</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'" [transitions]="false"
+                            style="display:block;height:150px;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30 [rangeLineCap]="'butt'">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>Mục tiêu năm:</h4>
+                                    <h3><strong>5,611 tỷ</strong>
+                                    </h3>
+                                </span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>HT năm:</h4>
+                                    <h3><strong>5,611 tỷ</strong>
+                                    </h3>
+                                </span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>Tăng trưởng:</h4>
+                                    <h3><strong>30.65%</strong></h3>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly original insurance</h3>
+                </div>
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item type="verticalLine" [color]="'rgba(255, 0, 0, 0.74)'"
+                                [data]="[1, 2, 3, 5]">
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance accumulated until June</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'" [transitions]="false"
+                            style="display:block;height:150px;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30 [rangeLineCap]="'butt'">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>Mục tiêu năm:</h4>
+                                    <h3><strong>5,611 tỷ</strong>
+                                    </h3>
+                                </span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>HT năm:</h4>
+                                    <h3><strong>5,611 tỷ</strong>
+                                    </h3>
+                                </span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>Tăng trưởng:</h4>
+                                    <h3><strong>30.65%</strong></h3>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly original insurance</h3>
+                </div>
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item type="verticalLine" [color]="'rgba(255, 0, 0, 0.74)'"
+                                [data]="[1, 2, 3, 5]">
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance accumulated until June</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'" [transitions]="false"
+                            style="display:block;height:150px;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30 [rangeLineCap]="'butt'">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>Mục tiêu năm:</h4>
+                                    <h3><strong>5,611 tỷ</strong>
+                                    </h3>
+                                </span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>HT năm:</h4>
+                                    <h3><strong>5,611 tỷ</strong>
+                                    </h3>
+                                </span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <span class="text-muted fs-12">
+                                    <h4>Tăng trưởng:</h4>
+                                    <h3><strong>30.65%</strong></h3>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly original insurance</h3>
+                </div>
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item type="verticalLine" [color]="'rgba(255, 0, 0, 0.74)'"
+                                [data]="[1, 2, 3, 5]">
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance accumulated until June</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'"
+                            style="height: 200px; position: relative;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30 [rangeLineCap]="'butt'">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Mục tiêu năm:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Hoàn thành:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Năm trước:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Tăng trưởng:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>30.65%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">June Revenue Completion Rate</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'"
+                            style="height: 200px; position: relative;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30
+                                [rangeLineCap]="'butt'    ">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Mục tiêu năm:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Hoàn thành:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Năm trước:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Tăng trưởng:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>30.65%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Accumulated individual profit up to May</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'"
+                            style="height: 200px; position: relative;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30
+                                [rangeLineCap]="'butt'    ">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Mục tiêu năm:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Hoàn thành:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Năm trước:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Tăng trưởng:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>30.65%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance by class until June</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row card-body">
+                        <kendo-chart style="height:250px">
+                            <kendo-chart-legend position="top"></kendo-chart-legend>
+                            <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                            <kendo-chart-value-axis>
+                                <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                    [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                    [color]="item.color">
+                                </kendo-chart-value-axis-item> -->
+                            </kendo-chart-value-axis>
+                            <kendo-chart-category-axis>
+                                <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                                </kendo-chart-category-axis-item>
+                            </kendo-chart-category-axis>
+                            <kendo-chart-series>
+                                <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                    <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                    </kendo-chart-series-item-tooltip>
+                                </kendo-chart-series-item>
+                                <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                    <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                    </kendo-chart-series-item-tooltip>
+                                </kendo-chart-series-item>
+                                <kendo-chart-series-item type="line" [color]="'rgba(255, 0, 0, 0.74)'"
+                                    [data]="[1, 2, 3, 5]" [dashType]="'dot'">
+                                </kendo-chart-series-item>
+                            </kendo-chart-series>
+                        </kendo-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Compensation rate retained by class until May</h3>
+                </div>
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'rgba(255, 0, 0, 0.8)'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CONTAINER CLOSED --><!-- CONTAINER -->
+<div class="main-container container-fluid">
+    <div class="page-header">
+        <h1 class="page-title">Report General</h1>
+        <div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Report General</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance accumulated until June</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'"
+                            style="height: 200px; position: relative;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30 [rangeLineCap]="'butt'">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Mục tiêu năm:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Hoàn thành:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Năm trước:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Tăng trưởng:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>30.65%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">June Revenue Completion Rate</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'"
+                            style="height: 200px; position: relative;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30
+                                [rangeLineCap]="'butt'    ">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Mục tiêu năm:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Hoàn thành:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Năm trước:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Tăng trưởng:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>30.65%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Accumulated individual profit up to May</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">2,602 tỷ</h1>
+                        </span>
+                        <kendo-arcgauge [value]="10" [scale]="{ max: 50 }" [color]="'#006659'"
+                            style="height: 200px; position: relative;" class="k-gauge k-arcgauge">
+                            <kendo-arcgauge-scale [reverse]="false" [startAngle]="0" [endAngle]="180"
+                                [rangePlaceholderColor]="'rgb(235, 235, 235)'" [rangeSize]=30
+                                [rangeLineCap]="'butt'    ">
+                                <kendo-arcgauge-scale-labels format="c" [visible]="false">
+                                </kendo-arcgauge-scale-labels>
+                            </kendo-arcgauge-scale>
+                        </kendo-arcgauge>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Mục tiêu năm:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Hoàn thành:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Năm trước:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>5,611 tỷ</strong></h3>
+                        </span>
+                        <span class="text-muted fs-12">
+                            <h4>Tăng trưởng:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>30.65%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly original insurance</h3>
+                </div>
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item type="verticalLine" [color]="'rgba(255, 0, 0, 0.74)'"
+                                [data]="[1, 2, 3, 5]">
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Compensation rate retained until May</h3>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                        <span style="text-align: center;">
+                            <h1 class="mb-0 number-font display-3">28.80%</h1>
+                        </span>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <span class="text-muted fs-12">
+                            <h4>Last year:</h4>
+                            <h3><i class="fa fa-crosshairs text-primary"></i>&nbsp;<strong>28.47%</strong></h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Original insurance by class until June</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row card-body">
+                        <kendo-chart style="height:250px">
+                            <kendo-chart-legend position="top"></kendo-chart-legend>
+                            <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                            <kendo-chart-value-axis>
+                                <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                    [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                    [color]="item.color">
+                                </kendo-chart-value-axis-item> -->
+                            </kendo-chart-value-axis>
+                            <kendo-chart-category-axis>
+                                <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                                </kendo-chart-category-axis-item>
+                            </kendo-chart-category-axis>
+                            <kendo-chart-series>
+                                <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                    <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                    </kendo-chart-series-item-tooltip>
+                                </kendo-chart-series-item>
+                                <kendo-chart-series-item [color]="'#006659'" [data]="[50, 4, 5, 2, 1, 8]">
+                                    <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                    </kendo-chart-series-item-tooltip>
+                                </kendo-chart-series-item>
+                                <kendo-chart-series-item type="line" [color]="'rgba(255, 0, 0, 0.74)'"
+                                    [data]="[1, 2, 3, 5]" [dashType]="'dot'">
+                                </kendo-chart-series-item>
+                            </kendo-chart-series>
+                        </kendo-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Compensation rate retained by class until May</h3>
+                </div>
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'rgba(255, 0, 0, 0.8)'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CONTAINER CLOSED -->

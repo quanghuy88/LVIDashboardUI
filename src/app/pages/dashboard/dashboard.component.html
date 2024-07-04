@@ -231,29 +231,39 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Compensation rate retained by class until May</h3>
                 </div>
-                <div class="card-body">
-                    test
+                <div class="row card-body">
+                    <kendo-chart style="height:250px">
+                        <kendo-chart-legend position="top"></kendo-chart-legend>
+                        <kendo-chart-tooltip format="'Doanh thu: {0} tỷ'"> </kendo-chart-tooltip>
+                        <kendo-chart-value-axis>
+                            <!-- <kendo-chart-value-axis-item *ngFor="let item of valueAxes" [name]="item.name"
+                                [title]="item.title" [min]="item.min" [max]="item.max" [majorUnit]="item.majorUnit"
+                                [color]="item.color">
+                            </kendo-chart-value-axis-item> -->
+                        </kendo-chart-value-axis>
+                        <kendo-chart-category-axis>
+                            <kendo-chart-category-axis-item [categories]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri']">
+                            </kendo-chart-category-axis-item>
+                        </kendo-chart-category-axis>
+                        <kendo-chart-series>
+                            <kendo-chart-series-item [color]="'rgb(235, 235, 235)'" [data]="[1, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                            <kendo-chart-series-item [color]="'rgba(255, 0, 0, 0.8)'" [data]="[50, 4, 5, 2, 1, 8]">
+                                <kendo-chart-series-item-tooltip format="Doanh thu: {0} tỷ">
+                                </kendo-chart-series-item-tooltip>
+                            </kendo-chart-series-item>
+                        </kendo-chart-series>
+                    </kendo-chart>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row ">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Original insurance by class until June</h3>
-                </div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 <!-- CONTAINER CLOSED -->
